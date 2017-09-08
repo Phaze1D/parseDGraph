@@ -1,0 +1,24 @@
+{
+  "name": "parse_dgraph",
+  "version": "0.0.1",
+  "description": "Parses GraphQL queries into DGraph queries",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "GraphQL",
+    "dgraph"
+  ],
+  "author": "David Villarreal",
+  "license": "ISC",
+  "dependencies": {
+    "graphql": "^0.11.3",
+    "graphql-iso-date": "^3.3.0"
+  },
+  "devDependencies": {
+    "ts-loader": "^2.3.6",
+    "typescript": "^2.5.2",
+    "webpack": "^3.5.6"
+  }
+}
