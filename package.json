@@ -2,9 +2,15 @@
   "name": "parse_dgraph",
   "version": "0.0.1",
   "description": "Parses GraphQL queries into DGraph queries",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --watch",
+    "prestart": "rimraf dist",
+    "start": "webpack --watch --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Phaze1D/parseDGraph.git"
   },
   "keywords": [
     "GraphQL",
@@ -17,8 +23,31 @@
     "graphql-iso-date": "^3.3.0"
   },
   "devDependencies": {
+    "@types/graphql": "^0.11.1",
+    "@types/jest": "^20.0.8",
+    "awesome-typescript-loader": "^3.2.3",
+    "jest": "^21.0.2",
+    "rimraf": "^2.6.1",
+    "ts-jest": "^21.0.0",
     "ts-loader": "^2.3.6",
     "typescript": "^2.5.2",
-    "webpack": "^3.5.6"
+    "webpack": "^3.5.6",
+    "webpack-node-externals": "^1.6.0"
+  },
+  "jest": {
+    "transform": {
+      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json"
+    ]
   }
 }
