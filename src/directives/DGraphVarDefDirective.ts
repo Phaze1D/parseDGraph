@@ -10,7 +10,7 @@ import {
 *
 */
 export const DGraphVarDefDirective = new GraphQLDirective({
-  name: 'varDef',
+  name: 'as',
   description: 'Directive func for DGraph',
   locations: [ // TODO: Missing validation only on Node type
     DirectiveLocation.FIELD
