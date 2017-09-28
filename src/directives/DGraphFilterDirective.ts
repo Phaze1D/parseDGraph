@@ -1,4 +1,4 @@
-import { DGraphLogicInput } from 'types/inputs'
+import { DGraphLogicInput } from '../types/inputs/DGraphLogicInput'
 import {
   GraphQLDirective,
   GraphQLNonNull,
