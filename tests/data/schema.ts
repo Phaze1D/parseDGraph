@@ -25,7 +25,15 @@ const personInterface = new GraphQLInterfaceType({
     name: {
       type: new GraphQLNonNull(GraphQLString)
     }
-  })
+  }),
+  resolveType(person) {
+    if(person.type === 'Real'){
+      return realType
+    }
+    if(person.type === 'Fictional'){
+      return fictionalType
+    }
+  }
 })
 
 
