@@ -1,4 +1,7 @@
+import { runQuery } from './database'
 import { parseDGraph } from 'utils/parser'
+import { DGraphInputs } from 'types/inputs'
+import { DGraphDirectives } from 'directives'
 import { GraphQLDateTime } from 'graphql-iso-date'
 import {
   GraphQLInterfaceType,
@@ -148,9 +151,13 @@ const queryType = new GraphQLObjectType({
 export const Schema = new GraphQLSchema({
   query: queryType,
   types: [
+    ...DGraphInputs,
     movieType,
     realType,
     fictionalType,
     genreType
+  ],
+  directives: [
+    ...DGraphDirectives
   ]
 })
