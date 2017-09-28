@@ -137,7 +137,7 @@ export function createGraph(){
     }
   }
 
-  console.log(ds)
+  // console.log(ds)
 }
 
 

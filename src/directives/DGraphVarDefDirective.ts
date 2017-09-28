@@ -11,7 +11,7 @@ import {
 */
 export const DGraphVarDefDirective = new GraphQLDirective({
   name: 'as',
-  description: 'Directive func for DGraph',
+  description: 'Directive for DGraph var definition',
   locations: [ // TODO: Missing validation only on Node type
     DirectiveLocation.FIELD
   ],
