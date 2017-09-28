@@ -1,16 +1,35 @@
-import * as dir from 'directives'
+import { graphql } from 'graphql'
+import { Schema } from './data/schema'
 import * as mock from './data/mock'
 
 
+
 beforeAll(() => {
-  mock.createGraph()
+  // mock.createGraph()
 })
 
 
 describe('Testing Queries with Directives', () => {
 
-  xtest('DGraphFuncDirective', async () => {
-    fail()
+  test('DGraphFuncDirective', async () => {
+    let query = `
+    {
+      movie @filter(func: {
+        filter1:{
+          uid: { uids: ["someuid"]}
+        }
+      }){
+        starring {
+          name
+        }
+        genres {
+          genre
+        }
+      }
+    }
+    `
+    const result = await graphql(Schema,query)
+    expect(result.data).toMatchObject({})
   })
 
 

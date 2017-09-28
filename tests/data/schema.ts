@@ -147,7 +147,9 @@ const queryType = new GraphQLObjectType({
   fields: () => ({
     movie: {
       type: movieType,
-      resolve: (root, input, context, info) => parseDGraph(info)
+      resolve: (root, input, context, info) => {
+        return runQuery(parseDGraph(info))
+      }
     }
   })
 })
