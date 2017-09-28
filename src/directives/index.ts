@@ -1,5 +1,16 @@
-export * from './DGraphCascadeDirective'
-export * from './DGraphFuncDirective'
-export * from './DGraphIgnorereFlexDirective'
-export * from './DGraphNormalizeDirective'
-export * from './DGraphVarDefDirective'
+import { DGraphCascadeDirective } from './DGraphCascadeDirective'
+import { DGraphFilterDirective } from './DGraphFilterDirective'
+import { DGraphIgnorereFlexDirective } from './DGraphIgnorereFlexDirective'
+import { DGraphNormalizeDirective } from './DGraphNormalizeDirective'
+import { DGraphVarDefDirective } from './DGraphVarDefDirective'
+
+const DGraphDirectives = [
+  DGraphCascadeDirective,
+  DGraphFilterDirective,
+  DGraphIgnorereFlexDirective,
+  DGraphNormalizeDirective,
+  DGraphVarDefDirective
+]
+
+
+export { DGraphDirectives }

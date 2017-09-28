@@ -1,14 +1,34 @@
-export { DGraphTermsInput } from './DGraphTermsInput'
-export { DGraphRegexpInput } from './DGraphRegexpInput'
-export { DGraphExactInput } from './DGraphExactInput'
-export { DGraphUIDInput } from './DGraphUIDInput'
-export { DGraphUIDInInput } from './DGraphUIDInInput'
-export { DGraphHasInput } from './DGraphHasInput'
-export { DGraphNearInput } from './DGraphNearInput'
-export { DGraphCoordinatesInput } from './DGraphCoordinatesInput'
-export { DGraphContainInput } from './DGraphContainInput'
-export { DGraphPolygonInput } from './DGraphPolygonInput'
-export { DGraphFilterInput } from './DGraphFilterInput'
-export { DGraphLogicInput } from './DGraphLogicInput'
-export { DGraphVarInput } from './DGraphVarInput'
-export { DGraphSortInput } from './DGraphSortInput'
+import { DGraphTermsInput } from './DGraphTermsInput'
+import { DGraphRegexpInput } from './DGraphRegexpInput'
+import { DGraphExactInput } from './DGraphExactInput'
+import { DGraphUIDInput } from './DGraphUIDInput'
+import { DGraphUIDInInput } from './DGraphUIDInInput'
+import { DGraphHasInput } from './DGraphHasInput'
+import { DGraphNearInput } from './DGraphNearInput'
+import { DGraphCoordinatesInput } from './DGraphCoordinatesInput'
+import { DGraphContainInput } from './DGraphContainInput'
+import { DGraphPolygonInput } from './DGraphPolygonInput'
+import { DGraphFilterInput } from './DGraphFilterInput'
+import { DGraphLogicInput } from './DGraphLogicInput'
+import { DGraphVarInput } from './DGraphVarInput'
+import { DGraphSortInput } from './DGraphSortInput'
+
+
+const DGraphInputs = [
+  DGraphRegexpInput,
+  DGraphTermsInput,
+  DGraphExactInput,
+  DGraphUIDInput,
+  DGraphUIDInInput,
+  DGraphHasInput,
+  DGraphNearInput,
+  DGraphCoordinatesInput,
+  DGraphContainInput,
+  DGraphPolygonInput,
+  DGraphFilterInput,
+  DGraphLogicInput,
+  DGraphVarInput,
+  DGraphSortInput
+]
+
+export { DGraphInputs }
