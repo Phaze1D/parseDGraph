@@ -4,7 +4,7 @@
   "description": "Parses GraphQL queries into DGraph queries",
   "main": "dist/index.js",
   "scripts": {
-    "test": "jest -i --runInBand --watch",
+    "test": "jest",
     "prestart": "rimraf dist",
     "start": "webpack --watch --config webpack.config.js"
   },
